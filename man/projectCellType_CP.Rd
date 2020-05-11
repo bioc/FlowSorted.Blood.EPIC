@@ -17,10 +17,10 @@ projectCellType_CP(
 heterogeneous biospecimen (i.e., Whole Blood).  Target set.}
 
 \item{coefWBC}{A J x K projection matrix;, i.e., within-cell type mean methylation
-matrix across J DMLs and K many cell types}
+matrix across J L-DMRs and K number of cell types}
 
 \item{contrastWBC}{Contrast for cell composition predictions set to NULL by
-default. The user needn't modify this}
+default. The user should not modify this}
 
 \item{nonnegative}{Should cell predictions be nonnegative.  Defaults to TRUE}
 
@@ -33,8 +33,10 @@ of the N subjects contained in the Target Set.
 \description{
 This function predicts the underlying cellular composition of
 heterogeneous tissue  types (i.e., WB) using the constrained projection 
-procedure described by Houseman et al., (2012). 
-This is equivalent to the internal projectCellType function in minfi. We 
+procedure described by 
+\href{https://dx.doi.org/10.1186/s12859-016-0943-7}{Houseman et al. 2012}. 
+This is equivalent to the internal projectCellType function in minfi,
+\href{https://dx.doi.org/10.1186/gb-2014-15-2-r31}{Jaffe et al. 2014}. We 
 recommend this function only for advanced users. Please preprocess your 
 dataset filtering potential bad quality samples.
 }
